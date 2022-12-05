@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная</title>
+    <style type="text/css">
+
+        body {
+            font-family: Arial;
+        }
+
+        .container{
+            width: available;
+        }
+
+        .header {
+            color: crimson;
+            margin: 0 auto;
+            padding: 1%;
+            font-family: serif;
+            border: 1px solid rebeccapurple;
+            text-align: center;
+            width: fit-content;
+        }
+
+
+        .container > table {
+            margin: 25px auto;
+            border: blue 2px solid;
+            border-collapse: collapse;
+        }
+
+
+        .firstTable tr:nth-child(11){
+            border-top: rebeccapurple 1px solid;
+            border-bottom: rebeccapurple 1px solid;
+        }
+
+        .submit {
+            margin: 2px auto;
+            background: aquamarine;
+            width: fit-content;
+            height: fit-content;
+            padding: 5px;
+        }
+
+        .submit:hover{
+            background: chartreuse;
+        }
+
+        tr > th {
+            border: rebeccapurple 1px solid;
+        }
+
+        td {
+            border-left: rebeccapurple 1px solid;
+            border-right: rebeccapurple 1px solid;
+            text-align: center;
+        }
+
+        .error {
+            color: red;
+        }
+
+        input[type="text"] {
+            margin: 0 20px;
+            width: 100px;
+        }
+
+        .miss {
+            background: red;
+        }
+
+        .hit {
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            Лабораторная работа 1
+            <br>
+            Салеев Николай Владимирович
+            <br>
+            Пигулин Никита Александрович
+            <br>
+            Группа Р33202
+            <br>
+            Вариант 2322
+        </div>
+
+        <table class="firstTable">
+            <tr>
+                <th>Выберите Х</th>
+                <th>Выберите Y</th>
+                <th>Выберите R</th>
+                <th>График</th>
+            </tr>
+            <tr>
+                <td>
+                    <input name="X" type="radio" id="-X4" value="-4">
+                    <label for="-X4">-4</label>
+                </td>
+                <td rowspan="9">
+                    <input type="text" id="Y" placeholder="(-3..3)">
+                    <div class="error" id="Yerror"></div>
+                </td>
+                <td rowspan="9">
+                    <input type="text" id="R" placeholder="(2..5)">
+                    <div class="error" id="Rerror"></div>
+                </td>
+                <td rowspan="9">
+                    <img src="img\img.png">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <input name="X" type="radio" id="-X3" value="-3">
+                <label for="-X3">-3</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="X" type="radio" id="-X2" value="-2">
+                    <label for="-X2">-2</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="X" type="radio" id="-X1" value="-1">
+                    <label for="-X1">-1</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="X" type="radio" id="X0" value="0">
+                    <label for="X0"> 0</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="X" type="radio" id="X1" value="1">
+                    <label for="X1">1</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="X" type="radio" id="X2" value="2">
+                    <label for="X2">2</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="X" type="radio" id="X3" value="3">
+                    <label for="X3">3</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="X" type="radio" id="X4" value="4">
+                    <label for="X4">4</label>
+                    <div class="error" id="Xerror"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <div class="submit" id="submit"> Отправить</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <div id="localtime"></div>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tbody id="results">
+                <tr>
+                    <th>Время отправки запроса</th>
+                    <th>Время выполнения</th>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Попадание</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+<script src="script\script.js"></script>
+
+
+</body>
+</html>
